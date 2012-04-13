@@ -1,0 +1,17 @@
+<?php
+session_start();
+require_once('../Opent.php');
+require_once(OAUTH_ROOT.'/sohu/SohuOAuth.php');
+
+
+$o = new SohuOAuth($config['sohu']['akey'] , $config['sohu']['skey']);
+
+$keys = $o->getRequestToken();
+$aurl = $o->getAuthorizeURL( $keys['oauth_token'] ,false ,OAUTH_ROOT_URL.'/callback.php');
+
+$_SESSION['sohukeys'] = $keys;
+
+
+
+header('location: '.$aurl);
+?>
