@@ -30,8 +30,11 @@ class SiteController extends Controller
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		//$this->render('index');
-                Oauth::call('weibo.sina.trendsstatuses',$params_trendsstatuses,$token1,'',1);
-	}
+    	$wei = new Opent(new OpentSina);  
+    	$user = $wei->verify_credentials();       
+        var_dump($user);
+        
+   	}
 
 	/**
 	 * This is the action to handle external exceptions.

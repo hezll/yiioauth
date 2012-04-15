@@ -21,7 +21,9 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
-                'application.components.oauth',
+        'application.components.oauth.*',
+        'application.components.opent.*',
+        'application.components.opent.oauth1.*',
 	),
 
 	'modules'=>array(
