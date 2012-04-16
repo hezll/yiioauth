@@ -30,9 +30,14 @@ class SiteController extends Controller
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		//$this->render('index');
-    	$wei = new Opent(new OpentSina);  
-    	$user = $wei->verify_credentials();       
-        var_dump($user);
+            if(!Yii::app()->user->isGuest){
+                echo Yii::app()->user->username;
+                echo Yii::app()->user->realname;
+                echo CHtml::Link('注销',array('site/logout'));
+
+            }else{
+                Yii::app()->getRequest()->redirect(Yii::app()->createUrl('account/loginpage'));
+            }
         
    	}
 

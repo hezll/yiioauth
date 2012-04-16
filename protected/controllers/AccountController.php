@@ -5,6 +5,7 @@
 class AccountController extends Controller
 {   
     private $_oauth;
+    private $_identity;
     public function __construct($id,$module=null)
     {
         parent::__construct($id, $module);
@@ -28,6 +29,12 @@ class AccountController extends Controller
         $o = new WeiboOAuth($platform, $session[$platform.'keys']['oauth_token'] , $session[$platform.'keys']['oauth_token_secret']  );
         $last_key = $o->getAccessToken($_REQUEST['oauth_verifier']) ;
         $session[$platform.'last_key'] = $last_key;
+   
+        $this->_identity=new UserIdentity('','');
+        $this->_identity->authenticate();
+        if($this->_identity->errorCode===UserIdentity::ERROR_NONE){        
+            Yii::app()->user->login($this->_identity,0);          
+        }
         Yii::app()->getRequest()->redirect(Yii::app()->createUrl('site/index'));
     }
     public function actionClear(){
