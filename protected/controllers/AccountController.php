@@ -14,9 +14,8 @@ class AccountController extends Controller
     public function actionLoginPage($platform='sina'){
         echo 'WelcomeToLogin';
         $o = new WeiboOAuth($platform);
-        $keys = $o->getRequestToken();
+        $keys = $o->getRequestToken(($platform=='qq')?'http://'.$_SERVER['HTTP_HOST'].$this->createUrl('callback',array('platform'=>$platform)):'');
         Yii::app()->session->add($platform.'keys',$keys);  
-       // echo 'http://'.$_SERVER['HTTP_HOST'].$this->createUrl('callback');exit;
         $aurl = $o->getAuthorizeURL( $keys['oauth_token'] ,false , 'http://'.$_SERVER['HTTP_HOST'].$this->createUrl('callback',array('platform'=>$platform)));
         echo "<a href=\"$aurl\">登录$platform</a>";
 
@@ -28,9 +27,13 @@ class AccountController extends Controller
         $session->open();
         $o = new WeiboOAuth($platform, $session[$platform.'keys']['oauth_token'] , $session[$platform.'keys']['oauth_token_secret']  );
         $last_key = $o->getAccessToken($_REQUEST['oauth_verifier']) ;
-        $session[$platform.'last_key'] = $last_key;
-   
-        $this->_identity=new UserIdentity('','');
+        $wei = new WeiboClient($platform,$last_key['oauth_token'],$last_key['oauth_token_secret']);  
+        if($platform!='qq'){
+            $user = $wei->verify_credentials();
+        }else{
+            $user = $wei->get_qq_user_info();
+        }
+        $this->_identity=new UserIdentity($user,'');
         $this->_identity->authenticate();
         if($this->_identity->errorCode===UserIdentity::ERROR_NONE){        
             Yii::app()->user->login($this->_identity,0);          

@@ -1,0 +1,20 @@
+三家SDK的区别
+
+注意sina原本的version 1.0a 这和另外两家不同，需要改成1.0
+
+sina的host，注意去掉此部分
+qq的callback不能为空，需要设定默认值,$keys = $o->getRequestToken(OAUTH_ROOT_URL.'/callback.php');//这里的*********************填上你的回调URL
+
+2012.4.17  by hezll
+
+
+帮助
+
+封装的最终目的，一次配置:config.php
+
+统一调用:$weibo = new Opent(new OpentSohu); //区别策略
+         echo $weibo->friends();
+
+版本1.0中只支持sina，和搜狐的opent调用模式
+
+如果需要其他平台，请添加对应的'Opent平台.php'策略文件，以及相对应的 '平台/index.php ,callback.php,oauth.php'

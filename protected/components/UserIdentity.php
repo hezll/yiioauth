@@ -17,8 +17,7 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate()
 	{
-            $wei = new Opent(new OpentSina);  
-            $user = $wei->verify_credentials();
+            $user = $this->username['data'];
             if(isset($user['error_code']))		
                 $this->errorCode=self::ERROR_USERNAME_INVALID;
             if(isset($user['id']))

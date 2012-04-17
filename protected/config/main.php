@@ -104,6 +104,7 @@ return array(
                         'request_token_uri' => SINA_API_HOST . '/oauth/request_token',
                         'authorize_uri' => SINA_API_HOST . '/oauth/authorize',
                         'access_token_uri' => SINA_API_HOST . '/oauth/access_token',
+                        'authenticate_uri' => SINA_API_HOST . '/oauth/authenticate',
                         'version'=>2,
                         'authorize_uri_2'=>'https://api.weibo.com/oauth2/authorize',//如果需要2.0 需要此处
                         'access_token_uri_2'=>'https://api.weibo.com/oauth2/access_token',
@@ -116,6 +117,7 @@ return array(
                         'request_token_uri' => QQ_API_HOST . '/cgi-bin/request_token',
                         'authorize_uri' => QQ_API_HOST . '/cgi-bin/authorize',
                         'access_token_uri' => QQ_API_HOST . '/cgi-bin/access_token',
+                         'authenticate_uri' => QQ_API_HOST . '/cgi-bin/authenticate',
                     ),
                     'sohu' => array(
                         'consumer' => array(
@@ -125,6 +127,7 @@ return array(
                         'request_token_uri' => SOHU_API_HOST . '/oauth/request_token',
                         'authorize_uri' => SOHU_API_HOST . '/oauth/authorize',
                         'access_token_uri' => SOHU_API_HOST . '/oauth/access_token',
+                        'authenticate_uri' => SOHU_API_HOST . '/oauth/authenticate',
                     ),
                 ),
 	),

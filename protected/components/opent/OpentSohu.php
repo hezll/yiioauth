@@ -4,15 +4,14 @@ require_once(OAUTH_ROOT.'/sohu/SohuOAuth.php');
 
 class OpentSohu extends WeiboClient implements IOpentStrategy
 {
-//=$sohuConfig['akey']=$sohuConfig['skey']
+
 function __construct() 
     { 
           
-        if(!session_id())
-            @session_start(); 
-        global $config;
+        $session = new CHttpSession;
+        $session->open();
         /* 如果access token不存在，则重定向到connect.php去申请access token*/
-        if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_token']) || empty($_SESSION['access_token']['oauth_token_secret'])) {
+        if (empty($session['access_token']) || empty($session['access_token']['oauth_token']) || empty($session['access_token']['oauth_token_secret'])) {
            header('Location: '.OAUTH_ROOT_URL.'/action/modules/opent/sohu/redirect.php'); //此处与sina略有不同，请注意。         
             exit;
         }

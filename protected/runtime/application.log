@@ -1719,3 +1719,202 @@ Stack trace:
 REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=209857694f5692e3944cfc1fc9d7d5b9&oauth_verifier=560203
 in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (33)
 in D:\wnmp\htdocs\yiioauth\index.php (13)
+2012/04/17 21:59:45 [error] [php] Undefined index: oauth_token (D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOauth.php:152)
+Stack trace:
+#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
+#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
+#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
+#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
+#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiioauth/index.php?r=account/loginpage&platform=sohu
+in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOauth.php (152)
+in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (17)
+in D:\wnmp\htdocs\yiioauth\index.php (13)
+2012/04/17 23:22:40 [error] [php] Undefined index: oauth_token (D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOauth.php:151)
+Stack trace:
+#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
+#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
+#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
+#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
+#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiioauth/index.php?r=account/loginpage&platform=qq
+in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOauth.php (151)
+in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (17)
+in D:\wnmp\htdocs\yiioauth\index.php (13)
+2012/04/17 23:40:50 [error] [exception.Exception] exception 'Exception' with message 'token rejected!' in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOauth.php:188
+Stack trace:
+#0 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(29): WeiboOAuth->getAccessToken('740232')
+#1 [internal function]: AccountController->actionCallback('sina')
+#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
+#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
+#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
+#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
+#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=94b1eb8e6396bcdec14ab91cbe91e2ea&oauth_verifier=740232
+HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage&platform=sina
+---
+2012/04/17 23:41:06 [error] [exception.Exception] exception 'Exception' with message 'token rejected!' in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOauth.php:188
+Stack trace:
+#0 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(29): WeiboOAuth->getAccessToken('655968')
+#1 [internal function]: AccountController->actionCallback('sina')
+#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
+#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
+#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
+#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
+#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=859a4535c611982ce4357b3984a1f9b9&oauth_verifier=655968
+HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage&platform=sina
+---
+2012/04/17 23:41:41 [error] [exception.Exception] exception 'Exception' with message 'token rejected!' in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOauth.php:188
+Stack trace:
+#0 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(29): WeiboOAuth->getAccessToken('171505')
+#1 [internal function]: AccountController->actionCallback('sina')
+#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
+#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
+#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
+#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
+#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=a54fcd06e192f9e3b672bd6cd26c466e&oauth_verifier=171505
+HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage&platform=sina
+---
+2012/04/17 23:43:59 [error] [php] include(WeboClient.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (D:\wnmp\htdocs\yiioauth\yii-1.1.10\YiiBase.php:418)
+Stack trace:
+#0 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(31): spl_autoload_call()
+#1 unknown(0): AccountController->actionCallback()
+#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
+#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
+#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
+#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=8b3f6db989a17e986c9f9baa3625865d&oauth_verifier=602778
+in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (31)
+in D:\wnmp\htdocs\yiioauth\index.php (13)
+2012/04/17 23:45:00 [error] [php] include(WeboClient.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (D:\wnmp\htdocs\yiioauth\yii-1.1.10\YiiBase.php:418)
+Stack trace:
+#0 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(30): spl_autoload_call()
+#1 unknown(0): AccountController->actionCallback()
+#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
+#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
+#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
+#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=8b3f6db989a17e986c9f9baa3625865d&oauth_verifier=602778
+in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (30)
+in D:\wnmp\htdocs\yiioauth\index.php (13)
+2012/04/17 23:53:15 [error] [exception.Exception] exception 'Exception' with message 'token rejected!' in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOAuth.php:188
+Stack trace:
+#0 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(29): WeiboOAuth->getAccessToken('10622109')
+#1 [internal function]: AccountController->actionCallback('sohu')
+#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
+#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
+#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
+#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
+#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sohu&oauth_token=16c293600ca1ab9c9d5e10782cc1ed5a&oauth_verifier=10622109
+HTTP_REFERER=http://api.t.sohu.com/oauth/authorize?oauth_token=16c293600ca1ab9c9d5e10782cc1ed5a&oauth_callback=http%3A%2F%2Fhezll-pc%2Fyiioauth%2Findex.php%3Fr%3Daccount%2Fcallback%26platform%3Dsohu
+---
+2012/04/17 23:53:25 [error] [php] Undefined index: $this->oauth->platform (D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboClient.php:460)
+Stack trace:
+#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
+#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
+#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
+#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
+#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=1877706a03530ab3d29b128556e04610&oauth_verifier=805244
+in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboClient.php (460)
+in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (31)
+in D:\wnmp\htdocs\yiioauth\index.php (13)
+2012/04/17 23:54:53 [error] [exception.Exception] exception 'Exception' with message 'token rejected!' in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOAuth.php:188
+Stack trace:
+#0 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(29): WeiboOAuth->getAccessToken('42693751')
+#1 [internal function]: AccountController->actionCallback('sohu')
+#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
+#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
+#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
+#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
+#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sohu&oauth_token=f8cfacfe14dcec4a75cd12259b619f2e&oauth_verifier=42693751
+HTTP_REFERER=http://api.t.sohu.com/oauth/authorize?oauth_token=f8cfacfe14dcec4a75cd12259b619f2e&oauth_callback=http%3A%2F%2Fhezll-pc%2Fyiioauth%2Findex.php%3Fr%3Daccount%2Fcallback%26platform%3Dsohu
+---
+2012/04/17 23:59:25 [error] [php] Undefined index: scheme (D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\OAuthRequest.php:180)
+Stack trace:
+#0 D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\OAuthRequest.php(253): OAuthSignatureMethod_HMAC_SHA1->build_signature()
+#1 D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\OAuthRequest.php(247): OAuthRequest->build_signature()
+#2 D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOAuth.php(244): OAuthRequest->sign_request()
+#3 D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOAuth.php(199): WeiboOAuth->oAuthRequest()
+#4 D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboClient.php(27): WeiboOAuth->get()
+#5 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(34): WeiboClient->get_qq_user_info()
+#6 unknown(0): AccountController->actionCallback()
+#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
+#10 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
+#11 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
+#12 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
+#13 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#14 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#15 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=qq&oauth_token=3098bc0580074bd29016f70dfdac1f11&oauth_verifier=942062&openid=604A9D3391246305B821F0485FDA5D6B&openkey=F10ED11C92FF643457F2DC2A9FE40362
+in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\OAuthRequest.php (180)
+in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\OAuthRequest.php (154)
+in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\OAuthSignatureMethod_HMAC_SHA1.php (12)
+2012/04/18 00:03:12 [error] [php] Undefined variable: user (D:\wnmp\htdocs\yiioauth\protected\components\UserIdentity.php:26)
+Stack trace:
+#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
+#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
+#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
+#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
+#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=qq&oauth_token=3098bc0580074bd29016f70dfdac1f11&oauth_verifier=942062&openid=604A9D3391246305B821F0485FDA5D6B&openkey=F10ED11C92FF643457F2DC2A9FE40362
+in D:\wnmp\htdocs\yiioauth\protected\components\UserIdentity.php (26)
+in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (37)
+in D:\wnmp\htdocs\yiioauth\index.php (13)

@@ -30,7 +30,7 @@ class WeiboOAuth {
      * 
      * @ignore 
      */ 
-    public $host = "http://api.t.sina.com.cn/"; 
+    public $host = array('sina'=>'http://api.t.sina.com.cn/','sohu'=>'http://api.t.sohu.com','qq'=>'http://open.t.qq.com'); 
     /** 
      * Set timeout default. 
      * 
@@ -86,19 +86,19 @@ class WeiboOAuth {
     /** 
      * @ignore 
      */ 
-    function accessTokenURL()  { return 'http://api.t.sina.com.cn/oauth/access_token'; } 
+    function accessTokenURL()  { return $this->oauthConfig['access_token_uri']; } 
     /** 
      * @ignore 
      */ 
-    function authenticateURL() { return 'http://api.t.sina.com.cn/oauth/authenticate'; } 
+    function authenticateURL() { return $this->oauthConfig['authenticate_uri']; } 
     /** 
      * @ignore 
      */ 
-    function authorizeURL()    { return 'http://api.t.sina.com.cn/oauth/authorize'; } 
+    function authorizeURL()    { return $this->oauthConfig['authorize_uri']; } 
     /** 
      * @ignore 
      */ 
-    function requestTokenURL() { return 'http://api.t.sina.com.cn/oauth/request_token'; } 
+    function requestTokenURL() { return $this->oauthConfig['request_token_uri']; } 
 
 
     /** 
@@ -141,11 +141,10 @@ class WeiboOAuth {
      */ 
     function getRequestToken($oauth_callback = NULL) { 
         $parameters = array(); 
-        if (!empty($oauth_callback)) { 
+         if (!empty($oauth_callback)) { 
             $parameters['oauth_callback'] = $oauth_callback; 
-        }  
-
-        $request = $this->oAuthRequest($this->requestTokenURL(), 'GET', $parameters); 
+        }   
+        $request = $this->oAuthRequest($this->requestTokenURL(), 'GET', $parameters);
         $token = OAuthUtil::parse_parameters($request); 
         if(isset($token['error_code']))
             throw new Exception(404,$token['error']);
@@ -186,7 +185,7 @@ class WeiboOAuth {
         $request = $this->oAuthRequest($this->accessTokenURL(), 'GET', $parameters); 
         $token = OAuthUtil::parse_parameters($request); 
         if(!isset($token['oauth_token']))
-            throw new Exception(404,'token rejected!');
+            throw new Exception('token rejected!');
         $this->token = new OAuthConsumer($token['oauth_token'], $token['oauth_token_secret']); 
         return $token; 
     } 
@@ -237,17 +236,14 @@ class WeiboOAuth {
      * @return string 
      */ 
     function oAuthRequest($url, $method, $parameters , $multi = false) { 
-
-        if (strrpos($url, 'http://') !== 0 && strrpos($url, 'http://') !== 0) { 
-            $url = "{$this->host}{$url}.{$this->format}"; 
-        } 
-
-        // echo $url ; 
+  
+//        if (strrpos($url, 'http://') !== 0 && strrpos($url, 'http://') !== 0) { 
+//            $url = "{$this->host}{$url}.{$this->format}"; 
+//        } 
         $request = OAuthRequest::from_consumer_and_token($this->consumer, $this->token, $method, $url, $parameters); 
         $request->sign_request($this->sha1_method, $this->consumer, $this->token); 
         switch ($method) { 
         case 'GET': 
-            //echo $request->to_url(); 
             return $this->http($request->to_url(), 'GET'); 
         default: 
             return $this->http($request->get_normalized_http_url(), $method, $request->to_postdata($multi) , $multi ); 
@@ -260,6 +256,7 @@ class WeiboOAuth {
      * @return string API results 
      */ 
     function http($url, $method, $postfields = NULL , $multi = false) { 
+        //$url = urlencode($url);
         $this->http_info = array(); 
         $ci = curl_init(); 
         /* Curl settings */ 
@@ -267,13 +264,10 @@ class WeiboOAuth {
         curl_setopt($ci, CURLOPT_CONNECTTIMEOUT, $this->connecttimeout); 
         curl_setopt($ci, CURLOPT_TIMEOUT, $this->timeout); 
         curl_setopt($ci, CURLOPT_RETURNTRANSFER, TRUE); 
-
         curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, $this->ssl_verifypeer); 
-
         curl_setopt($ci, CURLOPT_HEADERFUNCTION, array($this, 'getHeader')); 
-
         curl_setopt($ci, CURLOPT_HEADER, FALSE); 
-
+        
         switch ($method) { 
         case 'POST': 
             curl_setopt($ci, CURLOPT_POST, TRUE); 
@@ -324,8 +318,6 @@ class WeiboOAuth {
         curl_setopt($ci, CURLOPT_HTTPHEADER, $header_array2 ); 
         curl_setopt($ci, CURLINFO_HEADER_OUT, TRUE ); 
 
-        //echo $url."<hr/>"; 
-
         curl_setopt($ci, CURLOPT_URL, $url); 
 
         $response = curl_exec($ci); 
@@ -333,11 +325,11 @@ class WeiboOAuth {
         $this->http_info = array_merge($this->http_info, curl_getinfo($ci)); 
         $this->url = $url; 
 
-        //echo '=====info====='."\r\n";
-        //print_r( curl_getinfo($ci) ); 
+      //  echo '=====info====='."\r\n";
+      //  print_r( curl_getinfo($ci) ); 
         
-        //echo '=====$response====='."\r\n";
-        //print_r( $response ); 
+     //   echo '=====$response====='."\r\n";
+     //   print_r( $response ); 
 
         curl_close ($ci); 
         return $response; 

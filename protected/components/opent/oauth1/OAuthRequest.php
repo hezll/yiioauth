@@ -8,7 +8,7 @@ class OAuthRequest {
     private $http_url; 
     // for debug purposes 
     public $base_string; 
-    public static $version = '1.0a'; 
+    public static $version = '1.0'; 
     public static $POST_INPUT = 'php://input'; 
 
     function __construct($http_method, $http_url, $parameters=NULL) { 

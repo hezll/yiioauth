@@ -23,6 +23,13 @@ class WeiboClient
         $this->oauth = new WeiboOAuth( $platform, $accecss_token , $accecss_token_secret ); 
     } 
 
+    function get_qq_user_info(){
+        $url = 'http://open.t.qq.com/api/user/info?f=1';
+			$params = array(
+				'format' => 'json',
+			);
+        return $this->oauth->get($url,$params); 
+    }
     /** 
      * 最新公共微博 
      *  
@@ -457,7 +464,7 @@ class WeiboClient
     
     function verify_credentials() 
     { 
-        return $this->oauth->get( 'http://api.t.sina.com.cn/account/verify_credentials.json' );
+        return $this->oauth->get( $this->oauth->host[$this->oauth->platform].'/account/verify_credentials.json' );
     }
     
     function update_avatar( $pic_path )
