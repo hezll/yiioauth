@@ -71,7 +71,7 @@ class ArcArticle extends CActiveRecord
 			'id' => 'ID',
 			'category_id' => 'Category',
 			'articles_id' => 'Articles',
-			'content' => 'Content',
+			'content' => '内容',
 		);
 	}
 

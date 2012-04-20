@@ -1,12 +1,12 @@
 <?php
 $this->breadcrumbs=array(
-	'Ask Types'=>array('index'),
-	'Manage',
+	'问答类型'=>array('admin'),
+	'管理',
 );
 
 $this->menu=array(
-	array('label'=>'List AskType', 'url'=>array('index')),
-	array('label'=>'Create AskType', 'url'=>array('create')),
+	array('label'=>'添加类型', 'url'=>array('create')),
+	array('label'=>'管理类型', 'url'=>array('admin')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -23,14 +23,9 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Ask Types</h1>
+<h1>类型管理</h1>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('高级搜索','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -45,7 +40,6 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'id',
 		'pid',
 		'typename',
-		'is_del',
 		'sort',
 		'created',
 		/*

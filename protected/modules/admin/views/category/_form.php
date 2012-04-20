@@ -5,48 +5,44 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note"> <span class="required">*</span>必填项</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'topid'); ?>
-		<?php echo $form->textField($model,'topid'); ?>
-		<?php echo $form->error($model,'topid'); ?>
+	<?php if ($model->isNewRecord):?>
+	<div class="row width1">
+        <label class="required" for="Category_top_typename">
+            隶属分类    
+            <span class="required">*</span>
+        </label>
+        <select id="Category_top_typename" name="Category[pid]">
+			<option value="0">顶级分类</option>
+            <?php
+				$this->widget('CategoryList',
+							  array(
+									'model' => $model,
+									'condition' => 'is_del=0 AND pid=0',
+								)
+							);
+			?>
+        </select>
+    </div>
+	<?php endif;?>
+
+	<div class="row width1">
+		<?php echo $form->labelEx($model,'typename'); ?>
+		<?php echo $form->textField($model,'typename',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'typename'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'pid'); ?>
-		<?php echo $form->textField($model,'pid'); ?>
-		<?php echo $form->error($model,'pid'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'cate_name'); ?>
-		<?php echo $form->textField($model,'cate_name',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'cate_name'); ?>
-	</div>
-
-	<div class="row">
+	<div class="row width1">
 		<?php echo $form->labelEx($model,'sort'); ?>
 		<?php echo $form->textField($model,'sort'); ?>
 		<?php echo $form->error($model,'sort'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'created'); ?>
-		<?php echo $form->textField($model,'created'); ?>
-		<?php echo $form->error($model,'created'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'modified'); ?>
-		<?php echo $form->textField($model,'modified',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'modified'); ?>
-	</div>
-
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? '新增' : '保存'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

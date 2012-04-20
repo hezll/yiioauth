@@ -1024,897 +1024,368 @@ REQUEST_URI=/yiioauth/index.php?r=site/index
 in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboClient.php (21)
 in D:\wnmp\htdocs\yiioauth\protected\components\opent\OpentSina.php (17)
 in D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php (33)
-2012/04/16 21:55:31 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
+2012/04/16 10:52:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_weilaixing.mn_users' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `mn_users`.
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\RegistrationController.php (25)
+in E:\wnmp\htdocs\weilaixing\index.php (13)
+2012/04/16 10:52:50 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{users}}" for active record class "RegistrationForm" cannot be found in the database.' in E:\wnmp\htdocs\weilaixing\yii-1.1.10\db\ar\CActiveRecord.php:2264
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CModule.php(106): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(33): CModule->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(RegistrationForm))
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\db\ar\CActiveRecord.php(394): CActiveRecord::model('RegistrationFor...')
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\RegistrationController.php(25): CActiveRecord->__construct()
+#4 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\actions\CInlineAction.php(50): RegistrationController->actionRegistration()
+#5 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): CController->run('')
+#9 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#10 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#11 E:\wnmp\htdocs\weilaixing\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/weilaixing/index.php?r=user/registration
+HTTP_REFERER=http://localhost/weilaixing/index.php?r=user/login
 ---
-2012/04/16 22:01:25 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
+2012/04/16 11:03:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php:484
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(33): CWebUser->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(271): CController->missingAction('')
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): CController->run('')
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account')
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\wnmp\htdocs\weilaixing\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/weilaixing/?r=account
 ---
-2012/04/16 22:09:15 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
+2012/04/16 16:43:02 [error] [php] mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() (E:\wnmp\htdocs\weilaixing\protected\modules\user\UserModule.php:210)
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(33): CWebUser->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
----
-2012/04/16 22:11:49 [error] [php] Trying to get property of non-object (D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php:34)
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\actions\CInlineAction.php(50): RegistrationController->actionRegistration()
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(287): RegistrationController->runAction()
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): RegistrationController->runActionWithFilters()
+#4 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): RegistrationController->run()
+#5 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#6 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#7 E:\wnmp\htdocs\weilaixing\index.php(13): CWebApplication->run()
+REQUEST_URI=/weilaixing/index.php?r=user/registration
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\UserModule.php (210)
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\RegistrationController.php (58)
+in E:\wnmp\htdocs\weilaixing\index.php (13)
+2012/04/16 16:46:14 [error] [php] Trying to get property of non-object (E:\wnmp\htdocs\weilaixing\protected\modules\user\UserModule.php:178)
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#7 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=562a7ea04809621afab5a964e85f9e9d&oauth_verifier=465180
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (34)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/16 22:22:24 [error] [php] Trying to get property of non-object (D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php:34)
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CModel.php(259): User->createValidators()
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CModel.php(157): User->getValidators()
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\db\ar\CActiveRecord.php(786): User->validate()
+#3 E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php(36): User->save()
+#4 E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php(20): LoginController->lastViset()
+#5 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#6 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
+#7 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(287): LoginController->runAction()
+#8 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): LoginController->runActionWithFilters()
+#9 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): LoginController->run()
+#10 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#11 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#12 E:\wnmp\htdocs\weilaixing\index.php(13): CWebApplication->run()
+REQUEST_URI=/weilaixing/index.php?r=user/login
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\UserModule.php (178)
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\models\User.php (47)
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php (36)
+2012/04/16 16:46:42 [error] [php] Trying to get property of non-object (E:\wnmp\htdocs\weilaixing\protected\modules\user\UserModule.php:178)
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#7 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=ef44b5c4ba8cd973258e83e29de5dc6e&oauth_verifier=314951
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (34)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/16 22:22:46 [error] [php] Trying to get property of non-object (D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php:34)
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CModel.php(259): User->createValidators()
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CModel.php(157): User->getValidators()
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\db\ar\CActiveRecord.php(786): User->validate()
+#3 E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php(36): User->save()
+#4 E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php(20): LoginController->lastViset()
+#5 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#6 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
+#7 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(287): LoginController->runAction()
+#8 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): LoginController->runActionWithFilters()
+#9 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): LoginController->run()
+#10 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#11 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#12 E:\wnmp\htdocs\weilaixing\index.php(13): CWebApplication->run()
+REQUEST_URI=/weilaixing/index.php?r=user/login
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\UserModule.php (178)
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\models\User.php (47)
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php (36)
+2012/04/16 17:03:35 [error] [php] include(echoYii.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (E:\wnmp\htdocs\weilaixing\yii-1.1.10\YiiBase.php:418)
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#7 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=ef44b5c4ba8cd973258e83e29de5dc6e&oauth_verifier=314951
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (34)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/16 22:22:47 [error] [php] Trying to get property of non-object (D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php:34)
+#0 E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php(14): spl_autoload_call()
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(287): LoginController->runAction()
+#4 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): LoginController->runActionWithFilters()
+#5 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): LoginController->run()
+#6 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#7 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#8 E:\wnmp\htdocs\weilaixing\index.php(13): CWebApplication->run()
+REQUEST_URI=/weilaixing/index.php?r=user/login
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php (14)
+in E:\wnmp\htdocs\weilaixing\index.php (13)
+2012/04/16 17:34:16 [error] [php] Trying to get property of non-object (E:\wnmp\htdocs\weilaixing\protected\modules\user\UserModule.php:178)
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#7 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=ef44b5c4ba8cd973258e83e29de5dc6e&oauth_verifier=314951
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (34)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/16 22:22:47 [error] [php] Trying to get property of non-object (D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php:34)
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CModel.php(259): User->createValidators()
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CModel.php(157): User->getValidators()
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\db\ar\CActiveRecord.php(786): User->validate()
+#3 E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php(36): User->save()
+#4 E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php(20): LoginController->lastViset()
+#5 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#6 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
+#7 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(287): LoginController->runAction()
+#8 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): LoginController->runActionWithFilters()
+#9 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): LoginController->run()
+#10 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#11 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#12 E:\wnmp\htdocs\weilaixing\index.php(13): CWebApplication->run()
+REQUEST_URI=/weilaixing/index.php?r=user/login
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\UserModule.php (178)
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\models\User.php (47)
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php (36)
+2012/04/17 15:11:44 [error] [php] Trying to get property of non-object (E:\wnmp\htdocs\weilaixing\protected\modules\user\UserModule.php:178)
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#7 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=ef44b5c4ba8cd973258e83e29de5dc6e&oauth_verifier=314951
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (34)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/16 22:22:48 [error] [php] Trying to get property of non-object (D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php:34)
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CModel.php(259): User->createValidators()
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CModel.php(157): User->getValidators()
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\db\ar\CActiveRecord.php(786): User->validate()
+#3 E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php(36): User->save()
+#4 E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php(20): LoginController->lastViset()
+#5 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#6 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
+#7 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(287): LoginController->runAction()
+#8 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): LoginController->runActionWithFilters()
+#9 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): LoginController->run()
+#10 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#11 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#12 E:\wnmp\htdocs\weilaixing\index.php(13): CWebApplication->run()
+REQUEST_URI=/weilaixing/index.php?r=user/login
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\UserModule.php (178)
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\models\User.php (47)
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php (36)
+2012/04/17 15:34:29 [error] [exception.CException] exception 'CException' with message '属性 "UserLogin._email" 未被定义.' in E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CComponent.php:131
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#7 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=ef44b5c4ba8cd973258e83e29de5dc6e&oauth_verifier=314951
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (34)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/16 22:22:48 [error] [php] Trying to get property of non-object (D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php:34)
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#7 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=ef44b5c4ba8cd973258e83e29de5dc6e&oauth_verifier=314951
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (34)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/16 22:22:48 [error] [php] Trying to get property of non-object (D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php:34)
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#7 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=ef44b5c4ba8cd973258e83e29de5dc6e&oauth_verifier=314951
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (34)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/16 22:22:48 [error] [php] Trying to get property of non-object (D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php:34)
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#7 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=ef44b5c4ba8cd973258e83e29de5dc6e&oauth_verifier=314951
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (34)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/16 22:22:55 [error] [php] Trying to get property of non-object (D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php:34)
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#7 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=7b752151ba6e9bb888ff44976f937eb8&oauth_verifier=420462
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (34)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/16 22:23:03 [error] [php] Trying to get property of non-object (D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php:34)
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#7 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=f6dbadfb91493391335c84bc618b1d9d&oauth_verifier=614137
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (34)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/16 22:23:37 [error] [exception.CException] exception 'CException' with message 'Property "AccountController.rememberMe" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(37): CComponent->__get('rememberMe')
-#1 [internal function]: AccountController->actionCallback('sina')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
-#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#10 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#11 {main}
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=f6dbadfb91493391335c84bc618b1d9d&oauth_verifier=614137
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 22:24:02 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 22:24:37 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 22:24:38 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 22:24:38 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 22:24:38 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 22:24:38 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 22:24:39 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 22:26:59 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 22:27:00 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 22:27:14 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 22:28:56 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 22:29:41 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 22:29:44 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:174
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(155): CComponent->__set('username', 1410797647)
-#1 D:\wnmp\htdocs\yiioauth\protected\components\UserIdentity.php(22): CWebUser->__set('username', 1410797647)
-#2 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(35): UserIdentity->authenticate()
-#3 [internal function]: AccountController->actionCallback('sina')
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
-#10 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
-#11 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#12 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
+#0 E:\wnmp\htdocs\weilaixing\protected\modules\user\models\UserLogin.php(66): CComponent->__get('_email')
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\validators\CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#4 E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php(19): CModel->validate()
+#5 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#6 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): CController->run('')
+#10 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#11 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#12 E:\wnmp\htdocs\weilaixing\index.php(13): CApplication->run()
 #13 {main}
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=8aa5f8fa3d26beb6268dfa8a23994d09&oauth_verifier=223325
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
+REQUEST_URI=/weilaixing/index.php?r=user/login
+HTTP_REFERER=http://hezll-pc/weilaixing/index.php?r=user/login
 ---
-2012/04/16 22:57:16 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.realname" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
+2012/04/17 15:34:53 [error] [exception.CException] exception 'CException' with message '属性 "UserIdentity._email" 未被定义.' in E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CComponent.php:131
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('realname')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('realname')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
+#0 E:\wnmp\htdocs\weilaixing\protected\modules\user\models\UserLogin.php(66): CComponent->__get('_email')
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\validators\CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#4 E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php(19): CModel->validate()
+#5 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#6 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): CController->run('')
+#10 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#11 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#12 E:\wnmp\htdocs\weilaixing\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/weilaixing/index.php?r=user/login
+HTTP_REFERER=http://hezll-pc/weilaixing/index.php?r=user/login
+---
+2012/04/17 15:35:09 [error] [exception.CException] exception 'CException' with message '属性 "UserIdentity._email" 未被定义.' in E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CComponent.php:131
+Stack trace:
+#0 E:\wnmp\htdocs\weilaixing\protected\modules\user\models\UserLogin.php(66): CComponent->__get('_email')
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\validators\CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#4 E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php(19): CModel->validate()
+#5 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#6 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): CController->run('')
+#10 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#11 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#12 E:\wnmp\htdocs\weilaixing\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/weilaixing/index.php?r=user/login
+HTTP_REFERER=http://hezll-pc/weilaixing/index.php?r=user/login
+---
+2012/04/17 15:35:31 [error] [exception.CException] exception 'CException' with message '属性 "UserIdentity._email" 未被定义.' in E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CComponent.php:131
+Stack trace:
+#0 E:\wnmp\htdocs\weilaixing\protected\modules\user\models\UserLogin.php(66): CComponent->__get('_email')
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\validators\CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#4 E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php(19): CModel->validate()
+#5 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#6 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): CController->run('')
+#10 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#11 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#12 E:\wnmp\htdocs\weilaixing\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/weilaixing/index.php?r=user/login
+HTTP_REFERER=http://hezll-pc/weilaixing/index.php?r=user/login
+---
+2012/04/18 10:14:49 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "user".' in E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CComponent.php:266
+Stack trace:
+#0 E:\wnmp\htdocs\weilaixing\protected\controllers\SiteController.php(32): CComponent->__call('user', Array)
+#1 E:\wnmp\htdocs\weilaixing\protected\controllers\SiteController.php(32): CWebUser->user()
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
+#7 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
+#8 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\wnmp\htdocs\weilaixing\index.php(13): CApplication->run()
 #10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
+REQUEST_URI=/weilaixing/index.php?r=site/index
+HTTP_REFERER=http://hezll-pc/weilaixing/index.php?r=user/profile
 ---
-2012/04/16 22:57:58 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.realname" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
+2012/04/18 10:15:49 [error] [exception.CException] exception 'CException' with message '属性 "CWebUser.username" 未被定义.' in E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CComponent.php:131
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('realname')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('realname')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
+#1 E:\wnmp\htdocs\weilaixing\protected\controllers\SiteController.php(32): CWebUser->__get('username')
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
+#7 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
+#8 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\wnmp\htdocs\weilaixing\index.php(13): CApplication->run()
 #10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
+REQUEST_URI=/weilaixing/index.php?r=site/index
+HTTP_REFERER=http://hezll-pc/weilaixing/index.php?r=user/profile
 ---
-2012/04/16 22:57:59 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.realname" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
+2012/04/18 10:20:25 [error] [php] Undefined variable: form (E:\wnmp\htdocs\weilaixing\protected\modules\user\views\user\login.php:30)
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('realname')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('realname')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(870): LoginController->renderFile()
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(783): LoginController->renderPartial()
+#2 E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php(28): LoginController->render()
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#4 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
+#5 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(287): LoginController->runAction()
+#6 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): LoginController->runActionWithFilters()
+#7 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): LoginController->run()
+#8 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#9 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 E:\wnmp\htdocs\weilaixing\index.php(13): CWebApplication->run()
+REQUEST_URI=/weilaixing/index.php?r=user/login
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\views\user\login.php (30)
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\LoginController.php (28)
+in E:\wnmp\htdocs\weilaixing\index.php (13)
+2012/04/18 10:37:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "action" 动作.' in E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php:484
+Stack trace:
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(271): CController->missingAction('')
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): CController->run('')
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('user/user/')
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\wnmp\htdocs\weilaixing\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/weilaixing/index.php?r=user/user/
 ---
-2012/04/16 22:58:42 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.realname" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
+2012/04/18 10:38:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "index" 动作.' in E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php:484
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('realname')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('realname')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(271): CController->missingAction('')
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): CController->run('')
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('user/user/')
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\wnmp\htdocs\weilaixing\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/weilaixing/index.php?r=user/user/
 ---
-2012/04/16 22:59:53 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.realname" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
+2012/04/18 10:39:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "index" 动作.' in E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php:484
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('realname')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('realname')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(271): CController->missingAction('index')
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('user/user/index')
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\wnmp\htdocs\weilaixing\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/weilaixing/index.php?r=user/user/index
+HTTP_REFERER=http://hezll-pc/weilaixing/index.php?r=user/user/view&id=3
 ---
-2012/04/16 22:59:54 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.realname" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
+2012/04/18 10:39:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "view" 动作.' in E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php:484
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('realname')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('realname')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(271): CController->missingAction('view')
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): CController->run('view')
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('user/user/view')
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\wnmp\htdocs\weilaixing\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/weilaixing/index.php?r=user/user/view&id=1
+HTTP_REFERER=http://hezll-pc/weilaixing/index.php?r=user
 ---
-2012/04/16 23:00:16 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.realname" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
+2012/04/18 10:39:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "view" 动作.' in E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php:484
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('realname')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('realname')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(271): CController->missingAction('view')
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): CController->run('view')
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('user/user/view')
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\wnmp\htdocs\weilaixing\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/weilaixing/index.php?r=user/user/view&id=2
+HTTP_REFERER=http://hezll-pc/weilaixing/index.php?r=user
 ---
-2012/04/16 23:00:49 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.realname" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
+2012/04/18 10:39:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "index" 动作.' in E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php:484
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('realname')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('realname')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(271): CController->missingAction('index')
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('user/user/index')
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\wnmp\htdocs\weilaixing\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/weilaixing/index.php?r=user/user/index
 ---
-2012/04/16 23:00:49 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.realname" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
+2012/04/18 11:18:31 [error] [php] Undefined index: ajax (E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\ProfileController.php:34)
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('realname')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('realname')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 23:00:53 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.realname" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(287): ProfileController->runAction()
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): ProfileController->runActionWithFilters()
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): ProfileController->run()
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#4 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#5 E:\wnmp\htdocs\weilaixing\index.php(13): CWebApplication->run()
+REQUEST_URI=/weilaixing/index.php?r=user/profile/edit
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\ProfileController.php (34)
+in E:\wnmp\htdocs\weilaixing\index.php (13)
+2012/04/18 11:19:22 [error] [php] Undefined index: User (E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\ProfileController.php:34)
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('realname')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(37): CWebUser->__get('realname')
-#2 [internal function]: AccountController->actionCallback('sina')
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
-#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
-#10 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#11 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#12 {main}
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=dfa61ee804b7d7ca92c8b041a5917d0a&oauth_verifier=854475
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 23:02:49 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "user".' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:266
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(287): ProfileController->runAction()
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): ProfileController->runActionWithFilters()
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): ProfileController->run()
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#4 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#5 E:\wnmp\htdocs\weilaixing\index.php(13): CWebApplication->run()
+REQUEST_URI=/weilaixing/index.php?r=user/profile/edit
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\ProfileController.php (34)
+in E:\wnmp\htdocs\weilaixing\index.php (13)
+2012/04/20 14:15:42 [warning] [application] Failed to set unsafe attribute "password" of "User".
+in E:\wnmp\htdocs\weilaixing\protected\modules\user\controllers\ProfileController.php (43)
+in E:\wnmp\htdocs\weilaixing\index.php (13)
+2012/04/20 14:15:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message '您未被授权执行这个动作' in E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\auth\CAccessControlFilter.php:157
 Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(38): CComponent->__call('user', Array)
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(38): CWebApplication->user()
-#2 [internal function]: AccountController->actionCallback('sina')
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
-#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
-#10 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#11 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#12 {main}
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=dfa61ee804b7d7ca92c8b041a5917d0a&oauth_verifier=854475
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 23:02:59 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.realname" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('realname')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(38): CWebUser->__get('realname')
-#2 [internal function]: AccountController->actionCallback('sina')
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
-#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
-#10 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#11 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#12 {main}
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=dfa61ee804b7d7ca92c8b041a5917d0a&oauth_verifier=854475
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 23:08:09 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.realname" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('realname')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(37): CWebUser->__get('realname')
-#2 [internal function]: AccountController->actionCallback('sina')
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
-#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
-#10 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#11 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#12 {main}
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=dfa61ee804b7d7ca92c8b041a5917d0a&oauth_verifier=854475
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 23:08:15 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.realname" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('realname')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(37): CWebUser->__get('realname')
-#2 [internal function]: AccountController->actionCallback('sina')
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
-#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
-#10 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#11 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#12 {main}
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=c87129c292d0d2ef7e171fd913c07146&oauth_verifier=840088
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 23:11:46 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 23:17:33 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CComponent.php:131
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\auth\CWebUser.php(141): CComponent->__get('username')
-#1 D:\wnmp\htdocs\yiioauth\protected\controllers\SiteController.php(34): CWebUser->__get('username')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(50): SiteController->actionIndex()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('index')
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('site/index')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#9 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#10 {main}
-REQUEST_URI=/yiioauth/index.php?r=site/index
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage
----
-2012/04/16 23:17:36 [error] [php] Undefined variable: user (D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php:33)
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#7 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=209857694f5692e3944cfc1fc9d7d5b9&oauth_verifier=560203
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (33)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/17 21:59:45 [error] [php] Undefined index: oauth_token (D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOauth.php:152)
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
-#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#8 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/loginpage&platform=sohu
-in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOauth.php (152)
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (17)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/17 23:22:40 [error] [php] Undefined index: oauth_token (D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOauth.php:151)
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
-#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#8 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/loginpage&platform=qq
-in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOauth.php (151)
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (17)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/17 23:40:50 [error] [exception.Exception] exception 'Exception' with message 'token rejected!' in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOauth.php:188
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(29): WeiboOAuth->getAccessToken('740232')
-#1 [internal function]: AccountController->actionCallback('sina')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
-#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#10 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
+#0 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), '???????????????...')
+#1 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(292): CFilterChain->run()
+#6 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(276): CController->run('admin')
+#8 E:\wnmp\htdocs\weilaixing\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('admin/articles/...')
+#9 E:\wnmp\htdocs\weilaixing\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 E:\wnmp\htdocs\weilaixing\index.php(13): CApplication->run()
 #11 {main}
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=94b1eb8e6396bcdec14ab91cbe91e2ea&oauth_verifier=740232
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage&platform=sina
+REQUEST_URI=/weilaixing/index.php?r=admin/articles/admin
+HTTP_REFERER=http://hezll-pc/weilaixing/index.php?r=user/profile/edit
 ---
-2012/04/17 23:41:06 [error] [exception.Exception] exception 'Exception' with message 'token rejected!' in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOauth.php:188
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(29): WeiboOAuth->getAccessToken('655968')
-#1 [internal function]: AccountController->actionCallback('sina')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
-#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#10 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#11 {main}
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=859a4535c611982ce4357b3984a1f9b9&oauth_verifier=655968
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage&platform=sina
----
-2012/04/17 23:41:41 [error] [exception.Exception] exception 'Exception' with message 'token rejected!' in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOauth.php:188
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(29): WeiboOAuth->getAccessToken('171505')
-#1 [internal function]: AccountController->actionCallback('sina')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
-#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#10 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#11 {main}
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=a54fcd06e192f9e3b672bd6cd26c466e&oauth_verifier=171505
-HTTP_REFERER=http://hezll-pc/yiioauth/index.php?r=account/loginpage&platform=sina
----
-2012/04/17 23:43:59 [error] [php] include(WeboClient.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (D:\wnmp\htdocs\yiioauth\yii-1.1.10\YiiBase.php:418)
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(31): spl_autoload_call()
-#1 unknown(0): AccountController->actionCallback()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#10 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=8b3f6db989a17e986c9f9baa3625865d&oauth_verifier=602778
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (31)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/17 23:45:00 [error] [php] include(WeboClient.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (D:\wnmp\htdocs\yiioauth\yii-1.1.10\YiiBase.php:418)
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(30): spl_autoload_call()
-#1 unknown(0): AccountController->actionCallback()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#10 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=8b3f6db989a17e986c9f9baa3625865d&oauth_verifier=602778
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (30)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/17 23:53:15 [error] [exception.Exception] exception 'Exception' with message 'token rejected!' in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOAuth.php:188
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(29): WeiboOAuth->getAccessToken('10622109')
-#1 [internal function]: AccountController->actionCallback('sohu')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
-#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#10 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#11 {main}
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sohu&oauth_token=16c293600ca1ab9c9d5e10782cc1ed5a&oauth_verifier=10622109
-HTTP_REFERER=http://api.t.sohu.com/oauth/authorize?oauth_token=16c293600ca1ab9c9d5e10782cc1ed5a&oauth_callback=http%3A%2F%2Fhezll-pc%2Fyiioauth%2Findex.php%3Fr%3Daccount%2Fcallback%26platform%3Dsohu
----
-2012/04/17 23:53:25 [error] [php] Undefined index: $this->oauth->platform (D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboClient.php:460)
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
-#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#8 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sina&oauth_token=1877706a03530ab3d29b128556e04610&oauth_verifier=805244
-in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboClient.php (460)
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (31)
-in D:\wnmp\htdocs\yiioauth\index.php (13)
-2012/04/17 23:54:53 [error] [exception.Exception] exception 'Exception' with message 'token rejected!' in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOAuth.php:188
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(29): WeiboOAuth->getAccessToken('42693751')
-#1 [internal function]: AccountController->actionCallback('sohu')
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AccountController), Array)
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AccountController), Object(ReflectionMethod), Array)
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams(Array)
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): CController->run('callback')
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('account/callbac...')
-#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#10 D:\wnmp\htdocs\yiioauth\index.php(13): CApplication->run()
-#11 {main}
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=sohu&oauth_token=f8cfacfe14dcec4a75cd12259b619f2e&oauth_verifier=42693751
-HTTP_REFERER=http://api.t.sohu.com/oauth/authorize?oauth_token=f8cfacfe14dcec4a75cd12259b619f2e&oauth_callback=http%3A%2F%2Fhezll-pc%2Fyiioauth%2Findex.php%3Fr%3Daccount%2Fcallback%26platform%3Dsohu
----
-2012/04/17 23:59:25 [error] [php] Undefined index: scheme (D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\OAuthRequest.php:180)
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\OAuthRequest.php(253): OAuthSignatureMethod_HMAC_SHA1->build_signature()
-#1 D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\OAuthRequest.php(247): OAuthRequest->build_signature()
-#2 D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOAuth.php(244): OAuthRequest->sign_request()
-#3 D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboOAuth.php(199): WeiboOAuth->oAuthRequest()
-#4 D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\WeiboClient.php(27): WeiboOAuth->get()
-#5 D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php(34): WeiboClient->get_qq_user_info()
-#6 unknown(0): AccountController->actionCallback()
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
-#8 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#9 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#10 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#11 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#12 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#13 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#14 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#15 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=qq&oauth_token=3098bc0580074bd29016f70dfdac1f11&oauth_verifier=942062&openid=604A9D3391246305B821F0485FDA5D6B&openkey=F10ED11C92FF643457F2DC2A9FE40362
-in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\OAuthRequest.php (180)
-in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\OAuthRequest.php (154)
-in D:\wnmp\htdocs\yiioauth\protected\components\opent\oauth1\OAuthSignatureMethod_HMAC_SHA1.php (12)
-2012/04/18 00:03:12 [error] [php] Undefined variable: user (D:\wnmp\htdocs\yiioauth\protected\components\UserIdentity.php:26)
-Stack trace:
-#0 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
-#1 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#2 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(309): CInlineAction->runWithParams()
-#3 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(287): AccountController->runAction()
-#4 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CController.php(266): AccountController->runActionWithFilters()
-#5 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(276): AccountController->run()
-#6 D:\wnmp\htdocs\yiioauth\yii-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
-#7 D:\wnmp\htdocs\yiioauth\yii-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
-#8 D:\wnmp\htdocs\yiioauth\index.php(13): CWebApplication->run()
-REQUEST_URI=/yiioauth/index.php?r=account/callback&platform=qq&oauth_token=3098bc0580074bd29016f70dfdac1f11&oauth_verifier=942062&openid=604A9D3391246305B821F0485FDA5D6B&openkey=F10ED11C92FF643457F2DC2A9FE40362
-in D:\wnmp\htdocs\yiioauth\protected\components\UserIdentity.php (26)
-in D:\wnmp\htdocs\yiioauth\protected\controllers\AccountController.php (37)
-in D:\wnmp\htdocs\yiioauth\index.php (13)

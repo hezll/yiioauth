@@ -7,7 +7,7 @@ class ArticlesController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
-
+    
 	/**
 	 * @return array action filters
 	 */
@@ -50,6 +50,7 @@ class ArticlesController extends Controller
 	 */
 	public function actionView($id)
 	{
+        Yii::app()->format->datetimeFormat='Y-m-d H:i:s';
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
@@ -62,19 +63,70 @@ class ArticlesController extends Controller
 	public function actionCreate()
 	{
 		$model=new Articles;
-
+        $arcmodel = new ArcArticle;
+        $categorymodel = new Category;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
 		if(isset($_POST['Articles']))
 		{
 			$model->attributes=$_POST['Articles'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$model->uid = Yii::app()->user->id;
+			$model->username = Yii::app()->user->name;
+            
+            if ($_FILES['Articles'])
+            {
+                $image = CUploadedFile::getInstance($model, 'thumb');
+                Yii::import('application.extensions.upload.Upload');
+                $thumb = Upload::createImages($image, 'article');
+                $model->thumb = $thumb;
+            }
+            $transaction = $model->dbConnection->beginTransaction();  
+            try  
+            {
+                $model->save();
+                $content = $_POST['Articles']['content'];
+                if (empty($content)) $content = null;
+                
+                $arcmodel->category_id = $model->category_id;
+                $arcmodel->articles_id = $model->id;
+                $arcmodel->content = $content;
+                if ($arcmodel->save())
+                {
+                    if ($image !== null)
+                    {
+                        $image->saveAs(Yii::app()->basePath . '/..' . $model->thumb);
+                    }
+                    $transaction->commit();
+                    $this->redirect(array('view','id'=>$model->id));
+                }
+            }
+            catch(Exception $e)  
+            {  
+                $transaction->rollBack();  
+            }
+            
+            //if($model->save())
+            //{
+            //    //$path = YiiBase::getPathOfAlias('webroot').Yii::app()->getBaseUrl();
+            //    if ($image !== null)
+            //    {
+            //        $image->saveAs(Yii::app()->basePath . '/..' . $model->thumb);
+            //    }
+            //    $arcmodel->category_id = $model->category_id;
+            //    $arcmodel->articles_id = $model->id;
+            //    if (empty($_POST['Articles']['content'])) $_POST['Articles']['content'] = null;
+            //    $arcmodel->content = $_POST['Articles']['content'];
+            //    if ($arcmodel->save())
+            //    {
+            //        $this->redirect(array('view','id'=>$model->id));
+            //    }
+            //}
 		}
-
+        $model->author = Yii::app()->user->name;
 		$this->render('create',array(
 			'model'=>$model,
+			'arcmodel'=>$arcmodel,
+            'categorymodel' => $categorymodel,
 		));
 	}
 
@@ -86,19 +138,45 @@ class ArticlesController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+        $arcmodel = new ArcArticle;
+        $categorymodel = new Category;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+        
 		if(isset($_POST['Articles']))
 		{
-			$model->attributes=$_POST['Articles'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+            $thumb = $model->thumb;
+            $model->attributes=$_POST['Articles'];
+            if ($_FILES['Articles'])
+            {
+                $image = CUploadedFile::getInstance($model, 'thumb');
+                if ($image !== null)
+                {
+                    Yii::import('application.extensions.upload.Upload');
+                    $thumb = Upload::createImages($image, 'article');
+                }
+            }
+            $model->thumb = $thumb;
+            if($model->save())
+			{
+                //$path = YiiBase::getPathOfAlias('webroot').Yii::app()->getBaseUrl();
+				$image->saveAs(Yii::app()->basePath . '/..' . $model->thumb);
+				$arcmodel->category_id = $model->category_id;
+				$arcmodel->articles_id = $model->id;
+                if (empty($_POST['Articles']['content'])) $_POST['Articles']['content'] = null;
+    			$arcmodel->content = $_POST['Articles']['content'];
+                
+				if ($arcmodel->save())
+                {
+                    $this->redirect(array('view','id'=>$model->id));
+                }
+			}
 		}
 
 		$this->render('update',array(
 			'model'=>$model,
+            'arcmodel'=>$arcmodel,
+            'categorymodel' => $categorymodel,
 		));
 	}
 
@@ -142,7 +220,7 @@ class ArticlesController extends Controller
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Articles']))
 			$model->attributes=$_GET['Articles'];
-
+        
 		$this->render('admin',array(
 			'model'=>$model,
 		));

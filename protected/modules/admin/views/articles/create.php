@@ -1,15 +1,14 @@
 <?php
 $this->breadcrumbs=array(
-	'Articles'=>array('index'),
-	'Create',
+	'文章'=>array('admin'),
+	'发布',
 );
 
 $this->menu=array(
-	array('label'=>'List Articles', 'url'=>array('index')),
-	array('label'=>'Manage Articles', 'url'=>array('admin')),
+	array('label'=>'文章管理', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Articles</h1>
+<h1>发布文章</h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('model'=>$model, 'arcmodel' => $arcmodel, 'categorymodel' => $categorymodel)); ?>

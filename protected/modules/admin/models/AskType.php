@@ -43,7 +43,7 @@ class AskType extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('typename', 'required'),
+			array('typename', 'required', 'message' => '分类名称不能为空'),
 			array('pid, is_del, sort, created, modified', 'numerical', 'integerOnly'=>true),
 			array('typename', 'length', 'max'=>45),
 			// The following rule is used by search().
@@ -70,16 +70,17 @@ class AskType extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'pid' => 'Pid',
-			'typename' => 'Typename',
-			'is_del' => 'Is Del',
-			'sort' => 'Sort',
-			'created' => 'Created',
-			'modified' => 'Modified',
+			'typename' => '类型名称',
+			'sort' => '排序',
+			'created' => '创建日期',
+			'modified' => '编辑日期',
 		);
 	}
-
+    public function getAskType($condition)
+    {
+        $asktype = $this->findAll($condition);
+        return $asktype;
+    }
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.

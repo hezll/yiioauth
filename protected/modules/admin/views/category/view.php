@@ -1,19 +1,18 @@
 <?php
 $this->breadcrumbs=array(
-	'Categories'=>array('index'),
-	$model->id,
+	'分类'=>array('admin'),
+    '详情'
 );
 
 $this->menu=array(
-	array('label'=>'List Category', 'url'=>array('index')),
-	array('label'=>'Create Category', 'url'=>array('create')),
-	array('label'=>'Update Category', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Category', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Category', 'url'=>array('admin')),
+	array('label'=>'添加分类', 'url'=>array('create')),
+    array('label'=>'编辑分类', 'url'=>array('update', 'id'=>$model->id)),
+    array('label'=>'删除分类', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'你确定要删除吗？该操作不可恢复')),
+	array('label'=>'管理分类', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Category #<?php echo $model->id; ?></h1>
+<h1>分类详情</h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -21,7 +20,7 @@ $this->menu=array(
 		'id',
 		'topid',
 		'pid',
-		'cate_name',
+		'typename',
 		'sort',
 		'created',
 		'modified',

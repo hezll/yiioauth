@@ -140,6 +140,7 @@ class WeiboOAuth {
      * @return array a key/value array containing oauth_token and oauth_token_secret 
      */ 
     function getRequestToken($oauth_callback = NULL) { 
+       
         $parameters = array(); 
          if (!empty($oauth_callback)) { 
             $parameters['oauth_callback'] = $oauth_callback; 
@@ -151,7 +152,6 @@ class WeiboOAuth {
         $this->token = new OAuthConsumer($token['oauth_token'], $token['oauth_token_secret']); 
         return $token; 
     } 
-
     /** 
      * Get the authorize URL 
      * 
@@ -161,6 +161,7 @@ class WeiboOAuth {
         if (is_array($token)) { 
             $token = $token['oauth_token']; 
         } 
+       
         if (empty($sign_in_with_Weibo)) { 
             return $this->authorizeURL() . "?oauth_token={$token}&oauth_callback=" . urlencode($url); 
         } else { 

@@ -1,15 +1,14 @@
 <?php
 $this->breadcrumbs=array(
-	'Categories'=>array('index'),
-	'Create',
+	'分类'=>array('admin'),
+	'添加',
 );
 
 $this->menu=array(
-	array('label'=>'List Category', 'url'=>array('index')),
-	array('label'=>'Manage Category', 'url'=>array('admin')),
+	array('label'=>'分类管理', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Category</h1>
+<h1>添加分类</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

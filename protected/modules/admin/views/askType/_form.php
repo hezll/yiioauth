@@ -5,48 +5,42 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note"> <span class="required">*</span>必填项</p>
 
-	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'pid'); ?>
-		<?php echo $form->textField($model,'pid'); ?>
-		<?php echo $form->error($model,'pid'); ?>
-	</div>
-
-	<div class="row">
+	<?php echo $form->errorSummary($model, false); ?>
+    <?php if ($model->isNewRecord):?>
+	<div class="row width1">
+        <label class="required" for="AskType_top_typename">
+            隶属分类    
+            <span class="required">*</span>
+        </label>
+        <select id="AskType_top_typename" name="AskType[pid]">
+			<option value="0">顶级分类</option>
+            <?php
+				$this->widget('CategoryList',
+							  array(
+									'model' => $model,
+									'condition' => 'is_del=0 AND pid=0',
+								)
+							);
+			?>
+        </select>
+    </div>
+	<?php endif;?>
+	<div class="row width1">
 		<?php echo $form->labelEx($model,'typename'); ?>
 		<?php echo $form->textField($model,'typename',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'typename'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'is_del'); ?>
-		<?php echo $form->textField($model,'is_del'); ?>
-		<?php echo $form->error($model,'is_del'); ?>
-	</div>
-
-	<div class="row">
+	<div class="row width1">
 		<?php echo $form->labelEx($model,'sort'); ?>
 		<?php echo $form->textField($model,'sort'); ?>
 		<?php echo $form->error($model,'sort'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'created'); ?>
-		<?php echo $form->textField($model,'created'); ?>
-		<?php echo $form->error($model,'created'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'modified'); ?>
-		<?php echo $form->textField($model,'modified'); ?>
-		<?php echo $form->error($model,'modified'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<div class="row width1 buttons">
+		<?php echo CHtml::submitButton($model->isNewRecord ? '新增' : '保存'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

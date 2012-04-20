@@ -28,7 +28,7 @@ class WeiboClient
 			$params = array(
 				'format' => 'json',
 			);
-        return $this->oauth->get($url,$params); 
+        return $this->preParseResponse($this->oauth->get($url,$params)); 
     }
     /** 
      * 最新公共微博 
@@ -464,7 +464,7 @@ class WeiboClient
     
     function verify_credentials() 
     { 
-        return $this->oauth->get( $this->oauth->host[$this->oauth->platform].'/account/verify_credentials.json' );
+        return $this->preParseResponse($this->oauth->get( $this->oauth->host[$this->oauth->platform].'/account/verify_credentials.json' ));
     }
     
     function update_avatar( $pic_path )
@@ -520,6 +520,51 @@ class WeiboClient
             return $this->oauth->$method($url , $param ); 
         } 
 
-    } 
+    }
+    public function preParseResponse($response){
+            $status = true;
+            $message = '';
+            switch ($this->oauth->platform)
+            {
+                case 'sina':
+                    if (!empty($response['error_code']))
+                    {
+                        //$this->parseError($response);
+                        $status = false;
+                        $message = isset($response['error']) ? $response['error'] : '40000:API ERROR';
+                        $response = '';
+                    }
+                    break;
+
+                case 'sohu':
+                    if (!empty($response['code']))
+                    {
+                        //$this->parseError($response);
+                        $status = false;
+                        $message = isset($response['error']) ? $response['error'] : '40000:API ERROR';
+                        $response = '';
+                    }
+                    break;
+
+                case 'qq':
+                    if (!empty($response['ret']))
+                    {
+                        //$this->parseError($response);
+                        $status = false;
+                        $message = isset($response['msg']) ? $response['msg'] : '40000:API ERROR';
+                        $response = '';
+                    }
+                    else
+                    {
+                        $response = $response['data'];
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+            $result = array('status' => $status, 'message' => $message, 'content' => $response);
+            return $result;                 
+    }
 
 } 

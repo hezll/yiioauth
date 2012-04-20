@@ -89,7 +89,7 @@ class Articles extends CActiveRecord
 			'category_id' => 'Category',
 			'category_path' => 'Category Path',
 			'title' => 'Title',
-			'uid' => '用户',
+			'uid' => 'Uid',
 			'username' => 'Username',
 			'author' => 'Author',
 			'thumb' => 'Thumb',

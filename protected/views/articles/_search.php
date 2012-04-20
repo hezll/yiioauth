@@ -74,17 +74,6 @@
 		<?php echo $form->label($model,'seo_title'); ?>
 		<?php echo $form->textField($model,'seo_title',array('size'=>60,'maxlength'=>200)); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'created'); ?>
-		<?php echo $form->textField($model,'created'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'modified'); ?>
-		<?php echo $form->textField($model,'modified'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

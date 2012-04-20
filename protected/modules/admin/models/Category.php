@@ -7,7 +7,7 @@
  * @property integer $id
  * @property integer $topid
  * @property integer $pid
- * @property string $cate_name
+ * @property string $typename
  * @property integer $sort
  * @property integer $created
  * @property string $modified
@@ -45,12 +45,12 @@ class Category extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('topid, pid, cate_name, sort, created, modified', 'required'),
+			array('pid, typename, sort, created', 'required'),
 			array('topid, pid, sort, created', 'numerical', 'integerOnly'=>true),
-			array('cate_name, modified', 'length', 'max'=>45),
+			array('typename', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, topid, pid, cate_name, sort, created, modified', 'safe', 'on'=>'search'),
+			array('id, topid, pid, typename, sort, created, modified', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,15 +75,23 @@ class Category extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'topid' => 'Topid',
-			'pid' => 'Pid',
-			'cate_name' => 'Cate Name',
-			'sort' => 'Sort',
-			'created' => 'Created',
-			'modified' => 'Modified',
+			'typename' => '分类名称',
+			'pid' => '父分类ID',
+			'sort' => '排序',
+			'created' => '创建日期',
+			'modified' => '编辑日期',
 		);
 	}
-
+    public function behaviors()
+    {
+        return array(
+            'CTimestampBehavior' => array(
+                'class' => 'zii.behaviors.CTimestampBehavior',
+                'createAttribute' => 'created',
+                'updateAttribute' => 'modified',
+            )
+        );
+    }
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
@@ -96,12 +104,7 @@ class Category extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('topid',$this->topid);
-		$criteria->compare('pid',$this->pid);
-		$criteria->compare('cate_name',$this->cate_name,true);
-		$criteria->compare('sort',$this->sort);
-		$criteria->compare('created',$this->created);
-		$criteria->compare('modified',$this->modified,true);
+		$criteria->compare('typename',$this->typename,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

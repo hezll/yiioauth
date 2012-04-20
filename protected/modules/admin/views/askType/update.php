@@ -1,8 +1,7 @@
 <?php
 $this->breadcrumbs=array(
-	'Ask Types'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	'问答类型'=>array('admin'),
+	'编辑',
 );
 
 $this->menu=array(
@@ -13,6 +12,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update AskType <?php echo $model->id; ?></h1>
+<h1>编辑类型 - <?php echo $model->typename; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

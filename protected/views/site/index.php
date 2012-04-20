@@ -9,7 +9,6 @@
 	<li>View file: <tt><?php echo __FILE__; ?></tt></li>
 	<li>Layout file: <tt><?php echo $this->getLayoutFile('main'); ?></tt></li>
 </ul>
-
 <p>For more details on how to further develop this application, please read
 the <a href="http://www.yiiframework.com/doc/">documentation</a>.
 Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,

@@ -68,6 +68,7 @@ class AskTypeController extends Controller
 
 		if(isset($_POST['AskType']))
 		{
+			$_POST['AskType']['created'] = time();
 			$model->attributes=$_POST['AskType'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
@@ -92,6 +93,7 @@ class AskTypeController extends Controller
 
 		if(isset($_POST['AskType']))
 		{
+			$_POST['AskType']['modified'] = time();
 			$model->attributes=$_POST['AskType'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));

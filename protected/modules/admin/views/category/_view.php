@@ -4,16 +4,12 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('topid')); ?>:</b>
-	<?php echo CHtml::encode($data->topid); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('pid')); ?>:</b>
 	<?php echo CHtml::encode($data->pid); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('cate_name')); ?>:</b>
-	<?php echo CHtml::encode($data->cate_name); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('typename')); ?>:</b>
+	<?php echo CHtml::encode($data->typename); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('sort')); ?>:</b>

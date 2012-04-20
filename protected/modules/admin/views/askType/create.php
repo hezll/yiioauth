@@ -1,15 +1,14 @@
 <?php
 $this->breadcrumbs=array(
-	'Ask Types'=>array('index'),
-	'Create',
+	'问答类型'=>array('index'),
+	'添加',
 );
 
 $this->menu=array(
-	array('label'=>'List AskType', 'url'=>array('index')),
-	array('label'=>'Manage AskType', 'url'=>array('admin')),
+	array('label'=>'类型管理', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create AskType</h1>
+<h1>新增类型</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

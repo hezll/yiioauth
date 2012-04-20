@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Ask Types',
+	'问答类型',
 );
 
 $this->menu=array(
-	array('label'=>'Create AskType', 'url'=>array('create')),
-	array('label'=>'Manage AskType', 'url'=>array('admin')),
+	array('label'=>'添加类型', 'url'=>array('create')),
+	array('label'=>'管理类型', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Ask Types</h1>
+<h1>类型</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
